@@ -1,6 +1,7 @@
 window.axios = require('axios');
-window.fuse = require('fuse.js');
 window.Vue = require('vue');
+
+require('./components/Search');
 
 import Search from './components/Search.vue';
 import hljs from 'highlight.js/lib/highlight';
@@ -21,10 +22,4 @@ document.querySelectorAll('pre code').forEach((block) => {
 });
 
 Vue.config.productionTip = false;
-
-new Vue({
-    components: {
-        Search,
-    },
-}).$mount('#vue-search');
 
